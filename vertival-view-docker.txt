@@ -1,0 +1,8 @@
+To place in the .bashrc or .zshrc:
+export FORMAT="\nID\t{{.ID}}\nIMAGE\t{{.Image}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.RunningFor}}\nSTATUS\t{{.Status}}\nPORTS\t{{.Ports}}\nNAMES\t{{.Names}}\n"
+
+Usage to see docker output in vertical format:
+docker ps --format $FORMAT
+
+alais it in .bashrc or .zshrc to avoid long typing:
+alias dockerf='docker ps --format $FORMAT'
